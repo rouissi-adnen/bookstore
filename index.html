@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Book Store.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+  <title>Book Store</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg">
+    <div class="container-fluid align-items-center">
+      <a class="navbar-brand" href="#">
+        <img src="image/logo-no-background.png" alt="" style="height: 28px;width: 200px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><img src="image/menu-deroulant.png" alt="" style="height: 40px;width: 50px;"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2  me-3 mb-lg-0">
+          <li class="nav-item ms-2">
+            <a class="nav-link active" aria-current="page" href="#" style="color: #FF7900!important;">Home</a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="nav-link" aria-current="page" href="#">Categories</a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="nav-link" aria-current="page" href="#">Latest Books</a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="nav-link" aria-current="page" href="#">About us</a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="nav-link" aria-current="page" href="#">Pricing and Plans</a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="nav-link" aria-current="page" href="#">Contact us</a>
+          </li>
+        </ul>
+        <div class="buttons">
+          <div class="search-box">
+            <input type="text" name="" id="searchbar" placeholder="Search...">
+            <button class="bi bi-search search-small me-2 ms-2"></button>
+          </div>
+          <button class="bi bi-search search-large me-2 ms-2" data-bs-toggle="modal"
+            data-bs-target="#searchmodal"></button>
+          <button class="your-shop">Shop now</button>
+          <div class="modal fade" id="searchmodal" tabindex="-1" aria-labelledby="searchmodalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <input type="text" name="search" id="searchField" placeholder="Search...">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="search-button">Search</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="cart-preview">
+    <button id="cart-preview-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <img src="image/carts.png" alt="">
+    </button>
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart Preview</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul id="item-list">
+            <h6 class="text-center text-light d-block" id="no-items">There is currently no items</h6>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Empty Cart</button>
+          <button type="button" class="btn btn-primary">Finish Shopping</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-section" id="hero-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="Slogan">
+            The Best Open Library Where Learning is Fun
+          </div>
+          <div class="tagline">
+            Here is treasure for an investigativemind. Booksare not only
+            to entretain usbut also inspire us so here are you can find
+            the largest book collection in the world
+          </div>
+          <button class="shop-button">Shop now</button>
+          <div class="social-media d-flex">
+            <div class="facebook"><a href="#" class="bi bi-facebook"></a></div>
+            <div class="instagram ms-2"><a href="#" class="bi bi-instagram"></a></div>
+            <div class="linkedin ms-2"><a href="#" class="bi bi-linkedin"></a></div>
+            <div class="twitter ms-2"><a href="#" class="bi bi-twitter"></a></div>
+            <div class="youtube ms-2"><a href="#" class="bi bi-youtube"></a></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="image/myimage8-removebg-preview (1).png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#ffffff" fill-opacity="1"
+        d="M0,288L24,266.7C48,245,96,203,144,197.3C192,192,240,224,288,224C336,224,384,192,432,176C480,160,528,160,576,170.7C624,181,672,203,720,192C768,181,816,139,864,154.7C912,171,960,245,1008,250.7C1056,256,1104,192,1152,154.7C1200,117,1248,107,1296,90.7C1344,75,1392,53,1416,42.7L1440,32L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z">
+      </path>
+    </svg>
+  </div>
+
+
+
+
+  <div class="browse-categories" id="browse-categories">
+    <div class="container">
+      <div class="categories-title pt-4">
+        Browse among +1000 Books
+      </div>
+      <div class="row">
+        <div class="col-6 col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="category mx-auto text-center">
+                <img src="image/stock-market.png" alt="">
+              </div>
+              <div class="category-title text-center mt-2">Trading E-Books</div>
+              <div class="text-center">
+                <a href="#">See more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="category mx-auto text-center">
+                <img src="image/echecs.png" alt="">
+              </div>
+              <div class="category-title text-center mt-2">Chess E-Books</div>
+              <div class="text-center">
+                <a href="#">See more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="category mx-auto text-center">
+                <img src="image/feather.png" alt="">
+              </div>
+              <div class="category-title text-center mt-2">History E-Books</div>
+              <div class="text-center">
+                <a href="#">See more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="category mx-auto text-center">
+                <img src="image/music.png" alt="">
+              </div>
+              <div class="category-title text-center mt-2">Music E-Books</div>
+              <div class="text-center">
+                <a href="#">See more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="category mx-auto text-center">
+                <img src="image/hearts.png" alt="">
+              </div>
+              <div class="category-title text-center mt-2">Romance E-Books</div>
+              <div class="text-center">
+                <a href="#">See more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-6 col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="category mx-auto text-center">
+                <img src="image/poele-a-frire.png" alt="">
+              </div>
+              <div class="category-title text-center mt-2">Cooking E-Books</div>
+              <div class="text-center">
+                <a href="#">See more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="category mx-auto text-center">
+                <img src="image/programmation-web.png" alt="">
+              </div>
+              <div class="category-title text-center mt-2">Programming E-Books</div>
+              <div class="text-center">
+                <a href="#">See more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="category mx-auto text-center">
+                <img src="image/taekwondo.png" alt="">
+              </div>
+              <div class="category-title text-center mt-2">Martial Arts E-Books</div>
+              <div class="text-center">
+                <a href="#">See more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="latest-ebooks" id="latest-ebooks">
+      <div class="container">
+        <div class="latest-ebooks-title text-light pt-4">Latest E-Books</div>
+        <ul class="books-table">
+          <li class="table-item">
+            <img src="image/forex.jpg" alt="forexbook">
+            <div class="d-flex justify-content-between">
+              <div class="text-light">
+                <div class="book-category text-light">Category: Trading</div>
+                <div class="book-author text-light">Author: Dr. Albert</div>
+              </div>
+              <div class="book-price" style="font-size: 27px;color: #fbff2b;">$99.9</div>
+            </div>
+            <button class="purchase" id="buy-item">Buy now</button>
+          </li>
+          <li class="table-item">
+            <img src="image/art.jpg" alt="forexbook">
+            <div class="d-flex justify-content-between">
+              <div class="text-light">
+                <div class="book-category text-light">Category: Trading</div>
+                <div class="book-author text-light">Author: Dr. Albert</div>
+              </div>
+              <div class="book-price" style="font-size: 27px;color: #fbff2b;">$99.9</div>
+            </div>
+            <button class="purchase" id="buy-item">Buy now</button>
+          </li>
+          <li class="table-item">
+            <img src="image/finance.jpg" alt="forexbook">
+            <div class="d-flex justify-content-between">
+              <div class="text-light">
+                <div class="book-category text-light">Category: Trading</div>
+                <div class="book-author text-light">Author: Dr. Albert</div>
+              </div>
+              <div class="book-price" style="font-size: 27px;color: #fbff2b;">$99.9</div>
+            </div>
+            <button class="purchase" id="buy-item">Buy now</button>
+          </li>
+          <li class="table-item">
+            <img src="image/wabdesign.jpg" alt="forexbook">
+            <div class="d-flex justify-content-between">
+              <div class="text-light">
+                <div class="book-category text-light">Category: Trading</div>
+                <div class="book-author text-light">Author: Dr. Albert</div>
+              </div>
+              <div class="book-price" style="font-size: 27px;color: #fbff2b;">$99.9</div>
+            </div>
+            <button class="purchase" id="buy-item">Buy now</button>
+          </li>
+          <li class="table-item">
+            <img src="image/science.jpg" alt="forexbook">
+            <div class="d-flex justify-content-between">
+              <div class="text-light">
+                <div class="book-category text-light">Category: Trading</div>
+                <div class="book-author text-light">Author: Dr. Albert</div>
+              </div>
+              <div class="book-price" style="font-size: 27px;color: #fbff2b;">$99.9</div>
+            </div>
+            <button class="purchase" id="buy-item">Buy now</button>
+          </li>
+          <li class="table-item">
+            <img src="image/music.jpg" alt="forexbook">
+            <div class="d-flex justify-content-between">
+              <div class="text-light">
+                <div class="book-category text-light">Category: Trading</div>
+                <div class="book-author text-light">Author: Dr. Albert</div>
+              </div>
+              <div class="book-price" style="font-size: 27px;color: #fbff2b;">$99.9</div>
+            </div>
+            <button class="purchase" id="buy-item">Buy now</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="about-bookstore" id="about-bookstore">
+      <div class="container">
+        <div class="about-us-title pt-4">About Bookstore</div>
+        <div class="card">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="image/abboutbookstore.png" alt="..." style="width: 100%;height: 100%;border-radius: 16px;">
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <div class="mt-2">
+                  Welcome to our online bookstore! We are a community of book lovers dedicated to bringing you the best
+                  selection of books from around the world. Our goal is to offer a wide range of titles that cater to
+                  all interests, ages, and reading levels. Our team handpicks each book on our shelves, ensuring that
+                  only the highest quality literature is available for our customers. From classic novels to the latest
+                  bestsellers, we have something for everyone. Browse our collections, read reviews from other book
+                  lovers, and join our community of readers today. Shop with confidence, knowing that every purchase
+                  helps support independent booksellers. Happy reading!
+                </div>
+                <button class="see-more mt-2">Check our Books</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing-section" id="pricing-plans">
+      <div class="container">
+        <div class="pricing-title pt-4">Our prices and plans</div>
+        <div class="pricing-plan-sub mt-3" style="font-weight: 500;color: #031D44;">
+          Chose an offer and start exploring among the different books we have prepared for you
+        </div>
+        <div class="row gy-2 justify-content-around mt-3">
+          <div class="col-md-4 col-12">
+            <div class="standard-card" style="background-color: black!important;">
+              <div class="card-body">
+                <h6 class="offer-title">Standard</h6>
+                <p class="offer-subtitle" style="color: #FF7900;">Recommended for small buisnesses</p>
+                <h4 class="offer-price">$0</h4>
+                <div class="offer-description">
+                  <h6 class="bi bi-check2-circle"><span class="ms-2">Unlimited visits Per Day</span></h6>
+                  <h6 class="bi bi-check2-circle"><span class="ms-2">Unlimited Access to premium Features</span></h6>
+                  <h6 class="bi bi-x-circle"><span class="ms-2">Unlimited discounts on courses</span></h6>
+                  <h6 class="bi bi-x-circle"><span class="ms-2">Unlimited tutorial videos</span></h6>
+                  <h6 class="bi bi-x-circle"><span class="ms-2">Unlimited content sharing</span></h6>
+                </div>
+                <div class="text-center">
+                  <button class="get-offer">Get Offfer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12">
+            <div class="gold-card" style="background-color: #ff7900;">
+              <div class="card-body">
+                <h6 class="offer-title">Gold</h6>
+                <p class="offer-subtitle">Recommended for small buisnesses</p>
+                <h4 class="offer-price">$100</h4>
+                <div class="offer-description">
+                  <h6 class="bi bi-check2-circle"><span class="ms-2">Unlimited visits Per Day</span></h6>
+                  <h6 class="bi bi-check2-circle"><span class="ms-2">Unlimited Access to premium Features</span></h6>
+                  <h6 class="bi bi-check2-circle"><span class="ms-2">Unlimited discounts on courses</span></h6>
+                  <h6 class="bi bi-check2-circle"><span class="ms-2">Unlimited tutorial videos</span></h6>
+                  <h6 class="bi bi-x-circle"><span class="ms-2">Unlimited content sharing</span></h6>
+                </div>
+                <div class="text-center">
+                  <button class="get-offer">Get Offfer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12">
+            <div class="royal-card" style="background-color: #031D44;">
+              <div class="card-body">
+                <h6 class="offer-title">Royal</h6>
+                <p class="offer-subtitle" style="color: #7180B9;">Recommended for small buisnesses</p>
+                <h4 class="offer-price">$500</h4>
+                <div class="offer-description">
+                  <h6 class="bi bi-check2-circle"><span class="ms-2">Unlimited visits Per Day</span></h6>
+                  <h6 class="bi bi-check2-circle"><span class="ms-2">Unlimited Access to premium Features</span></h6>
+                  <h6 class="bi bi-check2-circle"><span class="ms-2">Unlimited discounts on courses</span></h6>
+                  <h6 class="bi bi-check2-circle"><span class="ms-2">Unlimited tutorial videos</span></h6>
+                  <h6 class="bi bi-check2-circle"><span class="ms-2">Unlimited content sharing</span></h6>
+                </div>
+                <div class="text-center">
+                  <button class="get-offer">Get Offfer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container pt-1">
+        <div class="row  mt-5 justify-content-between">
+          <div class="col-md-4">
+            <div class="page-links">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#browse-categories">Browse by categories</a></li>
+                <li><a href="#latest-ebooks">Latest Books</a></li>
+                <li><a href="#about-bookstore">About-us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="page-links mt-2">
+              <ul>
+                <li><a href="#pricing-plans">Pricing and plans</a></li>
+                <li><a href="#">Social media</a></li>
+                <li><a href="#">Bootstrap 5 CDN<a></li>
+                <li><a href="#">Our Blog</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="page-links mt-2">
+              <ul>
+                <li><a href="#">Cover Books Design</a></li>
+                <li><a href="#">Best Seller</a></li>
+                <li><a href="#">Trending E-Books</a></li>
+                <li><a href="#">Privacy and Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-2 pb-2" style="color: #fbff2b;">© Copyright Rouissi Adnen</div>
+      </div>
+    </footer>
+
+
+    <script>
+      var itemList = document.getElementById('item-list');
+      var buyItem = document.getElementById('buy-item');
+      var noItem = document.getElementById('no-items');
+
+
+      buyItem.addEventListener('click', () => {
+        var myItem = document.createElement("li");
+        var itemImage = document.createElement("img");
+        var itemName = document.createElement("div");
+        var itemPrice = document.createElement("div");
+        var removeItem = document.createElement("button");
+        myItem.classList.add('d-flex', 'align-items-center', 'mt-2');
+        itemImage.src = "image/forex.jpg";
+        itemImage.style.width = '30px';
+        itemImage.style.height = '40px';
+        itemName.classList.add('item-name', 'text-light', 'ms-2');
+        itemName.innerText = "Forex Edition 1";
+        itemPrice.classList.add('item-price', 'text-warning', 'ms-2');
+        itemPrice.innerText = "$99.9";
+        removeItem.classList.add('remove-item', 'text-danger', 'ms-2', 'bi', 'bi-trash-fill', 'bg-transparent', 'border-0');
+        myItem.append(itemImage, itemName, itemPrice, removeItem);
+        itemList.appendChild(myItem);
+        noItem.remove()
+        console.log(itemList)
+      });
+
+      var myModal = document.getElementById('myModal')
+      var myInput = document.getElementById('myInput')
+      myModal.addEventListener('shown.bs.modal', function () {
+        myInput.focus()
+      })
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
